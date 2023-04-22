@@ -1,7 +1,10 @@
 let carModels = (inventory) => {
+   if (inventory.length===0 || !Array.isArray(inventory)){
+      return [];
+   }
      const ans = []
-     for (let i=0; i<inventory.length; i++){
-        ans.push(inventory[i].car_model);
+     for (let index=0; index<inventory.length; index++){
+        ans.push(inventory[index].car_model);
      }
      const result = ans.sort();
      return result

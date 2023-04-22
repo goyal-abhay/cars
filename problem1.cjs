@@ -1,9 +1,12 @@
 
 
 let carByID = (inventory, id) => {
-    for (let i = 0; i<inventory.length; i++){
-        if (inventory[i].id === id){
-            return inventory[i];
+    if (inventory.length===0 || typeof id !== 'number' || !Array.isArray(inventory)){
+        return [];
+    }
+    for (let index = 0; index<inventory.length; index++){
+        if (inventory[index].id === id){
+            return inventory[index];
         } 
     }
 }

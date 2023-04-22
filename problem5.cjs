@@ -1,8 +1,11 @@
 let year2000 = (inventory) => {
     const ans = []
-    for (let i=0; i<inventory.length; i++){
-        if (inventory[i].car_year < 2000) {
-            ans.push(inventory[i].car_year);
+    if (inventory.length===0 || !Array.isArray(inventory)){
+        return [];
+     }
+    for (let index=0; index<inventory.length; index++){
+        if (inventory[index].car_year < 2000) {
+            ans.push(inventory[index].car_year);
         }
     }
     return ans

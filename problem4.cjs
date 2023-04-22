@@ -1,9 +1,12 @@
 let carYears = (inventory) => {
     const years = [];
-    for (let i=0; i<inventory.length; i++) {
-        years.push(inventory[i].car_year);
+    if (inventory.length===0 || !Array.isArray(inventory)){
+        return [];
+     }
+    for (let index=0; index<inventory.length; index++) {
+        years.push(inventory[index].car_year);
     }
     return years;
 }
 
-module.exports = carYears
+module.exports = carYears;
