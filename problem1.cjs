@@ -1,7 +1,7 @@
 
 
 let carByID = (inventory, id) => {
-    if (inventory.length===0 || typeof id !== 'number' || !Array.isArray(inventory)){
+    if (!inventory || inventory.length===0 || typeof id !== 'number' || !Array.isArray(inventory)){
         return [];
     }
     for (let index = 0; index<inventory.length; index++){

@@ -1,6 +1,6 @@
 let BMW_Audi = inventory => {
     const BMWAndAudi = []
-    if (inventory.length===0 || !Array.isArray(inventory)){
+    if (!inventory || inventory.length===0 || !Array.isArray(inventory)){
         return [];
      }
     for (let index=0; index<inventory.length; index++){
